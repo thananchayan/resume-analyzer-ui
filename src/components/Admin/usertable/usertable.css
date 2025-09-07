@@ -1,0 +1,54 @@
+.user-table-container {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 1200px;
+  font-family: "Calibri", "Segoe UI", sans-serif;
+}
+
+.table-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff7d0b;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+    color:#5b5a59;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 14px;
+}
+
+.user-table th {
+  background: #9333ea;
+  color: #fff;
+  font-weight: 600;
+}
+
+.user-table tr:hover {
+  background: #f9f5ff;
+}
+
+.download-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #9333ea;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}

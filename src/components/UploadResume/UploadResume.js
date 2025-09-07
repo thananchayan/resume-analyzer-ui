@@ -1,6 +1,6 @@
-// src/components/UploadResume.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import './UploadResume.css';
 
 const UploadResume = ({ onResult }) => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -25,9 +25,13 @@ const UploadResume = ({ onResult }) => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div className="upload-container">
       <h2>Upload Resume</h2>
-      <input type="file" accept=".pdf,.docx" onChange={(e) => setSelectedFile(e.target.files[0])} />
+      <input
+        type="file"
+        accept=".pdf,.docx"
+        onChange={(e) => setSelectedFile(e.target.files[0])}
+      />
       <button onClick={handleUpload} disabled={loading}>
         {loading ? "Analyzing..." : "Upload & Analyze"}
       </button>

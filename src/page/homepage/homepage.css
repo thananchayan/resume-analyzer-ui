@@ -1,0 +1,127 @@
+
+/* Hero Section */
+.hero {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.hero-subtitle {
+  color: #9333ea;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+.resume-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.label{
+    color:#454444
+}
+.resume-form label {
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+
+.resume-form input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.resume-form input:focus {
+  border-color: #9333ea; /* purple border on focus */
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.2); /* subtle purple glow */
+  background-color: #ffffff;
+}
+.form-note {
+  margin: 10px 0 5px;
+  color: #0f172a;
+}
+
+/* Upload Box */
+.upload-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  background: #f8fafc;
+  position: relative;
+}
+
+.upload-icon {
+  font-size: 32px;
+  color: #9333ea;
+  margin-bottom: 10px;
+}
+
+.upload-box p {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.upload-box small {
+  display: block;
+  margin-bottom: 12px;
+  color: #64748b;
+}
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb; /* light gray */
+  border-radius: 6px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #9333ea, #f43f5e, #f97316);
+  transition: width 0.3s ease-in-out;
+}
+
+/* Button default */
+.browse-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  font-family: "Calibri", "Segoe UI", sans-serif;
+}
+
+/* Upload (Browse File) button → Blue */
+.upload-btn {
+  background: #ffffff;   /* blue */
+  color: #756c6c;
+  font-size: 14px;
+  border:2px solid #d9dde2
+}
+.upload-btn:hover {
+  background: #f5f5f5;   /* darker blue */
+}
+
+/* Analyze button → Purple */
+.analyze-btn {
+  background: #9333ea;   /* purple */
+  color: #fff;
+}
+.analyze-btn:hover {
+  background: #7e22ce;   /* darker purple */
+}
+
+/* Disabled state */
+.browse-btn:disabled {
+  
+  cursor: not-allowed;
+}
+

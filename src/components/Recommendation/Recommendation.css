@@ -1,0 +1,106 @@
+.recommend-container {
+  background: #ffffff;
+  border-left: 5px solid #9333ea;
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Calibri", "Segoe UI", sans-serif;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0;
+  color:  #4f46e5;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 6px;
+}
+
+/* Sub Headings */
+.recommend-container h3 {
+  margin: 15px 0 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #0f172a;
+}
+
+/* Skill Tags */
+.skill-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.skill-tag {
+  background: linear-gradient(to right, #5f0769, #f43f5e); 
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.skill-tag:hover {
+  background: #dc2626;
+}
+
+/* Analysis Note */
+.analysis-note {
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Course Recommendations */
+.recommend-container ul {
+  color: #065f46;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.recommend-container li {
+  margin: 8px 0;
+}
+
+.recommend-container a {
+  text-decoration: none;
+  color: #c76b02; /* purple links */
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.recommend-container a:hover {
+  color: #9333ea;
+  text-decoration: underline;
+}
+.recommend-container h3 {
+  margin: 20px 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;           /* dark slate */
+  font-family: "Calibri", "Segoe UI", sans-serif;
+  position: relative;
+  padding-left: 10px;
+}
+
+.recommend-container h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: #fb9a23;      /* purple accent bar */
+  border-radius: 2px;
+}

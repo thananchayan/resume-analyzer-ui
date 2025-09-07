@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #1e293b;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* keeps logo left, user icon right */
+  padding: 12px 24px;
+  background: #fff;
+  font-family: "Calibri", "Segoe UI", sans-serif;
+}
+
+/* Logo */
+.logo-img {
+  height: 40px;
+}
+
+/* Tagline centered using absolute positioning */
+.tagline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  color: #800786;
+}
+
+/* User Icon (clickable) */
+.user-icon {
+  font-size: 28px;
+  color: #800786;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.user-icon:hover {
+  color: #7e22ce;
+}
+
+/* Gradient Divider */
+.navbar-divider {
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(to right, #9333ea, #f43f5e, #f97316);
+  border: none;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 14px;
+  font-weight: 500;
+}
+.user-icon {
+  font-size: 28px;
+  color: linear-gradient(to right, #5f0769, #f43f5e, #f97316); /* purple accent */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.user-icon:hover {
+  color: #940fa2; /* darker purple on hover */
+}
+
+/* Divider under navbar */
+.navbar-divider {
+  height: 20px;  /* thickness */
+  width: 100%;
+  background: linear-gradient(to right, #5f0769, #f43f5e, #f97316); 
+  border: none;
+}

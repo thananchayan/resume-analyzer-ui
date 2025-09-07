@@ -1,0 +1,112 @@
+.admin-login-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Calibri", "Segoe UI", sans-serif;
+  background: #f9fafb;
+}
+
+.admin-login-form {
+  background: #ffffff;
+  margin-top: -50px;
+  padding: 30px 60px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  text-align: center;
+}
+
+/* Title */
+.form-title {
+  color: #7e22ce; /* purple heading */
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Labels */
+.admin-login-form label {
+  display: block;
+  text-align: left;
+  margin: 20px 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Inputs */
+.admin-login-form input {
+  width: 100%;
+  padding: 12px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 12px;
+  background: #f3f4f6;
+  outline: none;
+  transition: all 0.2s ease;
+  margin-bottom: 14px;
+}
+
+.admin-login-form input:focus {
+  border-color: #9333ea;
+  box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.2);
+  background: #fff;
+}
+
+/* Password field with eye icon */
+.password-field {
+  position: relative;
+   width: 100%;
+}
+
+.password-field input {
+   width: 100%;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.toggle-password:hover {
+  color: #9333ea;
+}
+
+/* Login button */
+.login-btn {
+    margin-top: 30px;
+  width: 80%;
+  padding: 12px;
+  background: linear-gradient(to right, #9333ea, #a855f7);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(to right, #7e22ce, #9333ea);
+}
+
+/* Message */
+.login-message {
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}

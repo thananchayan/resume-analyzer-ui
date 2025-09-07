@@ -1,25 +1,30 @@
 // src/App.js
-import React, { useState } from 'react';
-import UploadResume from './components/UploadResume';
-import Summary from './components/Summary';
-import Recommendation from './components/Recommendation';
-import ResumeCard from './components/ResumeCard';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import HomePage from "./page/homepage/homepage";
+import Summary from "./components/Summery/Summary";
+import Layout from "./components/Layout";
+import AdminLogin from "./components/Admin/Login/adminlogin";
+import UserTable from "./components/Admin/usertable/usertable";
+import ChartsDashboard from "./page/charts/charts";
 
 function App() {
-  const [result, setResult] = useState(null);
-
-  const handleResult = (data) => {
-    setResult(data);
-  };
-
   return (
-    <div className="App">
-      <h1>AI Resume Analyzer</h1>
-      <UploadResume onResult={handleResult} />
-      <ResumeCard data={result?.basicInfo} />
-      <Summary summary={result?.summary} />
-      <Recommendation jobRole={result?.jobRole} skills={result?.recommendedSkills} />
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          {/* Home route */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/admin-login" element={
+            <AdminLogin />
+          } />
+          <Route path="/summary" element={<Summary />} />
+          <Route path="/user-table" element={<UserTable />} />
+          <Route path="/chart-dashboard" element={<ChartsDashboard/>} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

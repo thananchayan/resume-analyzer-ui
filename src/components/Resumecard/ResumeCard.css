@@ -1,0 +1,39 @@
+.resume-card {
+  background: #f9fafb;              /* light gray background */
+  border-left: 5px solid #9333ea;   /* purple accent bar */
+  border-radius: 10px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Calibri", "Segoe UI", sans-serif; /* ✅ Calibri as main font */
+}
+
+.resume-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Name as Title */
+.resume-card h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #5c2702;
+}
+
+/* Label text (Email, Phone, Experience) */
+.resume-card strong {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6b7280; /* gray-500 */
+  margin-right: 6px;
+}
+
+/* Value text */
+.resume-card p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #1e293b;
+}
