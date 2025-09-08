@@ -6,24 +6,19 @@ import "./userscore.css";
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement);
 
-const ResumeScoreChart = () => {
+const ResumeScoreChart = ({ users = [] }) => {
+  const labels = users.map((u) => `${u.name} (${u.resume_score})`);
+  const scores = users.map((u) => u.resume_score);
+
   const data = {
-    labels: ["88", "18", "37", "72", "60", "41", "44"], // dummy score labels
+    labels,
     datasets: [
       {
-        data: [40, 20, 13.3, 6.87, 6.87, 6.87, 6.87], // example percentages
+        data: scores,
         backgroundColor: [
-          "#3a044fff", 
-          "#500e61ff", 
-          "#781484ff", 
-          "#ab14b8ff", 
-          "#b546bfff", 
-          "#b66cbdff", 
-          "#ba90beff", 
+          "#3a044f", "#500e61", "#781484", "#ab14b8", "#b546bf", "#b66cbd", "#ba90be",
         ],
-        borderWidth: 0,      
-        borderColor: "transparent", 
-        
+        borderWidth: 0,
       },
     ],
   };
@@ -38,5 +33,6 @@ const ResumeScoreChart = () => {
     </div>
   );
 };
+
 
 export default ResumeScoreChart;

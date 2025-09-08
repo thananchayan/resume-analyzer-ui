@@ -1,15 +1,16 @@
 // src/components/Layout.js
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
+import "./Layout.css";
 
 const Layout = ({ children }) => {
   return (
-    <div>
-  
+    <div className="app-layout">
       <Navbar />
-      <main>{children}</main>
+      <main className="app-main">{children}</main>
     </div>
   );
 };
+
 
 export default Layout;

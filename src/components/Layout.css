@@ -1,0 +1,21 @@
+/* src/components/layout.css */
+
+.app-layout {
+  min-height: 100vh;             /* full screen height */
+  display: flex;
+  flex-direction: column;
+
+  /* Background image */
+  background-image: url("../assets/BG.png");  /* path relative to public folder */
+  background-size: cover;        /* make it cover full screen */
+  background-position: center;   /* center the image */
+  background-repeat: no-repeat;  /* avoid tiling */
+  background-attachment: fixed;  /* keeps background fixed when scrolling */
+}
+
+.app-main {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7); /* optional: light overlay for readability */
+  border-radius: 12px;                  /* optional: smooth look */
+}

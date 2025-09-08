@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./homepage.css";
 import { FaCloudUploadAlt } from "react-icons/fa";
+import Summary from "../../components/Summery/Summary";
+import ResumeCard from "../../components/Resumecard/ResumeCard";
+import Recommendation from "../../components/Recommendation/Recommendation";
 
-
-const HomePage = ({ onResult }) => {
+const HomePage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [result, setResult] = useState(null);
 
   // Handle file selection
   const handleFileChange = (e) => {
@@ -23,6 +26,7 @@ const HomePage = ({ onResult }) => {
 
     setLoading(true);
     setProgress(0);
+    setResult(null);
 
     try {
       const response = await axios.post("http://localhost:8000/analyze", formData, {
@@ -35,30 +39,24 @@ const HomePage = ({ onResult }) => {
         },
       });
 
-      if (onResult) {
-        onResult(response.data);
-      }
+      setResult(response.data);
     } catch (error) {
       alert("Upload failed");
       console.error(error);
     } finally {
       setLoading(false);
-      setTimeout(() => setProgress(0), 1500); // clear bar after upload
+      setTimeout(() => setProgress(0), 1500);
     }
   };
 
   return (
     <div className="landing">
-      {/* Navbar */}
-
-
       {/* Hero Section */}
       <div className="hero">
         <h2 className="hero-subtitle">
           Unlock your career potential with AI-driven resume insights
         </h2>
 
-        {/* Form */}
         <form
           className="resume-form"
           onSubmit={(e) => {
@@ -83,7 +81,7 @@ const HomePage = ({ onResult }) => {
           <div className="upload-box">
             <FaCloudUploadAlt className="upload-icon" />
             <p>{selectedFile ? selectedFile.name : "Drag and Drop file here"}</p>
-            <small>Maximum file size per file 20MB .pdf</small>
+            <small>Maximum file size 20MB (.pdf, .docx)</small>
             <input
               type="file"
               accept=".pdf,.docx"
@@ -99,12 +97,12 @@ const HomePage = ({ onResult }) => {
           {/* Progress Bar */}
           {loading && (
             <div className="progress-bar">
-              <div
-                className="progress-fill"
-                style={{ width: `${progress}%` }}
-              ></div>
+              <div className="progress-fill" style={{ width: `${progress}%` }}></div>
             </div>
           )}
+
+          {/* Loader */}
+          {loading && <div className="loader">Processing your resume...</div>}
 
           {/* Analyze Button */}
           <button
@@ -116,6 +114,17 @@ const HomePage = ({ onResult }) => {
             {loading ? "Analyzing..." : "Analyze"}
           </button>
         </form>
+
+        {/* Results Section */}
+   {result && (
+  <div>
+     <h1 className="resume-title">Resume Analysis</h1>
+    <ResumeCard data={result.basicInfo} />
+    <Summary summary={result.summary} score={result.resume_score} />
+    <Recommendation jobRole={result.jobRole} skills={result.recommendedSkills} />
+  </div>
+)}
+
       </div>
     </div>
   );

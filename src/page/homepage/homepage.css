@@ -112,6 +112,7 @@
 
 /* Analyze button → Purple */
 .analyze-btn {
+  margin-bottom: 30px;
   background: #9333ea;   /* purple */
   color: #fff;
 }

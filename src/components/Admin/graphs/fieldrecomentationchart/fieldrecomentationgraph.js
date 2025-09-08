@@ -6,19 +6,21 @@ import "./fieldrecomentationgraph.css";
 
 ChartJS.register(Title, Tooltip, Legend, ArcElement);
 
-const FieldRecommendationChart = () => {
+const FieldRecommendationChart = ({ users = [] }) => {
+  const roleCounts = users.reduce((acc, u) => {
+    acc[u.job_role] = (acc[u.job_role] || 0) + 1;
+    return acc;
+  }, {});
+
   const data = {
-    labels: ["Web Development", "Data Science", "IOS Development", "UI-UX Development"],
+    labels: Object.keys(roleCounts),
     datasets: [
       {
-        data: [66.7, 13.3, 13.3, 6.7], // dummy values
-        backgroundColor: ["#E8EB52", "#B6DA56", "#7DCC7E", "#3CA580"],
-         borderWidth: 0,       
-        borderColor: "transparent", 
-       
+        data: Object.values(roleCounts),
+        backgroundColor: ["#E8EB52", "#B6DA56", "#7DCC7E", "#3CA580", "#845EC2", "#FF9671"],
+        borderWidth: 0,
       },
     ],
-   
   };
 
   return (

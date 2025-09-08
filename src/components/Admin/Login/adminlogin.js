@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import "./adminlogin.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const AdminLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,6 +17,7 @@ const AdminLogin = () => {
     // Dummy admin credentials
     if (username === "admin" && password === "admin123") {
       setMessage("✅ Welcome Admin!");
+      navigate("/user-table");
       // redirect logic can go here e.g. navigate("/admin/dashboard")
     } else {
       setMessage("❌ Invalid admin credentials!");

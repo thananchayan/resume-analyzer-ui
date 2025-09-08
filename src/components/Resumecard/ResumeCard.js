@@ -13,9 +13,7 @@ const ResumeCard = ({ data }) => {
       <p>
         <strong>Phone:</strong> {data.phone}
       </p>
-      <p>
-        <strong>Experience Level:</strong> {data.experience}
-      </p>
+  
     </div>
   );
 };
